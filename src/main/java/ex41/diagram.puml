@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Class App{
+- file : File
+- list : List<String>
+}
+@enduml

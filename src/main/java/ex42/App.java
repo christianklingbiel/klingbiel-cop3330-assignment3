@@ -41,7 +41,7 @@ Write your own code to parse the data. Don't use a CSV parser.
 
 public class App {
     public static void main(String[] args) throws Exception {
-        File file = new File("C:\\Users\\chris\\IdeaProjects\\klingbiel-cop3330-assignment3\\src\\main\\java\\ex42\\exercise42_input.txt");
+        File file = new File("C:\\Users\\chris\\IdeaProjects\\klingbiel-cop3330-assignment3\\src\\main\\java\\exercise42_input.txt");
         Scanner in = new Scanner(file);
         List<String> input = new ArrayList<>();
         while(in.hasNextLine()){
@@ -55,7 +55,7 @@ public class App {
         System.out.println("-----------------------");
         for(int i = 0;i < inputParts.size();i++){
             for(int j = 0;j < 3;j++){
-                System.out.print(inputParts.get(i)[j] + "   \t");
+                System.out.print(inputParts.get(i)[j] + "\t");
                 if(j%3==2){
                     System.out.println();
                 }

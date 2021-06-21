@@ -55,7 +55,7 @@ public class App {
         System.out.println("-----------------------");
         for(int i = 0;i < inputParts.size();i++){
             for(int j = 0;j < 3;j++){
-                System.out.print(inputParts.get(i)[j] + "\t");
+                System.out.print(inputParts.get(i)[j] + "   \t");
                 if(j%3==2){
                     System.out.println();
                 }

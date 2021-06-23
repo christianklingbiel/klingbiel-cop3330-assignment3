@@ -43,7 +43,7 @@ Don't hard-code the number of names.
  */
 
 public class App {
-    public static void main(String[] args) throws Exception{
+    public static void main() throws Exception{
         //identify file
         File file = new File("C:\\Users\\chris\\IdeaProjects\\klingbiel-cop3330-assignment3\\src\\main\\java\\exercise41_input.txt");
         List<String> list = new ArrayList<>();

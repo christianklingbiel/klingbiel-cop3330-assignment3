@@ -47,16 +47,23 @@ public class App {
         while(in.hasNextLine()){
             input.add(in.nextLine());
         }
+
+        print(conversion(input));
+    }
+    public static List<String[]> conversion(List<String> input){
         List<String[]> inputParts = new ArrayList<>();
-        for(int i = 0;i < input.size();i++){
-            inputParts.add(input.get(i).split(","));
+        for (String s : input) {
+            inputParts.add(s.split(","));
         }
+        return inputParts;
+    }
+    public static void print(List<String[]>inputParts){
         System.out.println("Last\tFirst\tSalary");
         System.out.println("-----------------------");
-        for(int i = 0;i < inputParts.size();i++){
-            for(int j = 0;j < 3;j++){
-                System.out.print(inputParts.get(i)[j] + "\t");
-                if(j%3==2){
+        for (String[] inputPart : inputParts) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(inputPart[j] + "\t");
+                if (j % 3 == 2) {
                     System.out.println();
                 }
             }

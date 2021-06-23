@@ -1,14 +1,16 @@
 package ex41;
 
 import jdk.jfr.StackTrace;
+import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class AppTest {
-    @StackTrace
     @DisplayName("Names should be sorted alphabetically from A to Z")
-    void sort(){
+    void sort() throws Exception {
         //Given
         List<String> names = new ArrayList<>();
         names.add("Zach");
@@ -24,7 +26,7 @@ public class AppTest {
 
         App nameSorter = new App();
 
-        nameSorter.sort(names);
+        //nameSorter.sort();
 
         assertEquals(expected, names);
     }

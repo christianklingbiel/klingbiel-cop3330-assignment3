@@ -36,15 +36,15 @@ If no record is found, prompt again.
 
 import java.io.InputStreamReader;
 import java.util.Scanner;
-/*
+
 public class ProductSearch {
     private static final Scanner in = new Scanner(System.in);
     private Products products;
-    private void loadData(String jsonPath){
-        Gson gson = new Gson();
+    private <Gson> void loadData(String jsonPath){
+        //Gson gson = new Gson();
         //open json file and store in string
         try(InputStreamReader jsonStream = new InputStreamReader(getClass().getClassLoader().getResourceAsStream(jsonPath))){
-            products = gson.fromJson(jsonStream, Products.class);
+            //products = gson.fromJson(jsonStream, Products.class);
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -53,15 +53,15 @@ public class ProductSearch {
         System.out.print("What is the product name?");
         return in.nextLine();
     }
-    public void run(){
+    public <Product> void run(){
         loadData("exercise44_input.json");
         Product match;
         while(true){
-            match = products.searchByName(readProductName());
+            match = (Product) products.searchByName(readProductName());
             if(match == null){
                 System.out.println("Sorry, that product wasn't found in our inventory.");
             } else{
-                System.out.println(match.toPrettyString());
+                System.out.println(match.toString());
                 break;
             }
         }
@@ -72,4 +72,3 @@ public class ProductSearch {
 
     }
 }
-*/

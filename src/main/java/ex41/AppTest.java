@@ -26,7 +26,7 @@ public class AppTest {
 
         App nameSorter = new App();
 
-        //nameSorter.sort();
+        //nameSorter.sort(names);
 
         assertEquals(expected, names);
     }

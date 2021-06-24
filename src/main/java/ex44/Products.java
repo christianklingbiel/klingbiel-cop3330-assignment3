@@ -1,18 +1,20 @@
 package ex44;
-/*
-public class Products {
+
+import java.util.ArrayList;
+
+public class Products<Product> {
     private ArrayList<Product> products;
 
     private StringBuilder stringRepr;
 
-    public Product searchByName(String name){
+    public <product> Product searchByName(String name){
         product match = null;
         for(Product p : products){
-            if(p.name.equalsIgnoreCase(name)){
-                match = p;
-            }
+            //if(p.name.equalsIgnoreCase(name)){
+                //match = (product) p;
+            //}
         }
-        return match;
+        return (Product) match;
     }
 
     @Override
@@ -25,4 +27,3 @@ public class Products {
         return stringRepr.toString();
     }
 }
-*/

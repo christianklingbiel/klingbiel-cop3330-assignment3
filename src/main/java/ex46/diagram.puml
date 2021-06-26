@@ -1,11 +1,21 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
+Class Exercise46{
+- inputPath = String
+- wTable = WordTable
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+Class WordCounter{
+- word : String
+- count : int
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+Class WordTable{
+- wordCounts : HashMap<String, WordCounter>
+- inputPath : String
+- maxWordLength : int
++ word : String
++ counts : List<WordCounter>
+}
 @enduml

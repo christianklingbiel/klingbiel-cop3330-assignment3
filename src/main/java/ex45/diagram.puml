@@ -1,11 +1,10 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
-
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+Class WordFinder{
++ output : List<String>
+- line : String
+- f : File
++ bw : BufferedWriter
+}
 @enduml

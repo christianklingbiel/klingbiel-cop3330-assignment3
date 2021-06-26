@@ -49,7 +49,7 @@ public class ProductSearch {
             ex.printStackTrace();
         }
     }
-    private String readProductName(){
+    public String readProductName(){
         System.out.print("What is the product name?");
         return in.nextLine();
     }
